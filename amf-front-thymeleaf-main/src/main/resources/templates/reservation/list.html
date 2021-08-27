@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Bodyguard</title>
+	<!-- 공통 css, js, meta tag -->
+	<th:block th:replace="fragment/head"></th:block>
+</head>
+
+<body class="register-page">
+
+	<nav th:replace="fragment/navbar :: navbar"></nav>
+
+	<div class="wrapper">
+
+		<section class="section section-shaped section-lg">
+			<div class="shape shape-style-1 bg-gradient-default">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+			<div class="container pt-lg-7">
+				<div class="card">
+					<div class="card-header">
+						예약조회
+					</div>
+					<div class="card-body">
+						<div class="row">
+							<div class="col-md-10">
+								<div class="row">
+									<div class="col-md-2">
+										<div class="col-form-label">예약일자</div>
+									</div>
+									<div class="col-md-4">
+										<div class="form-group">
+											<div class="input-group">
+												<div class="input-group-prepend">
+													<span class="input-group-text"><i
+															class="ni ni-calendar-grid-58"></i></span>
+												</div>
+												<input class="flatpickr flatpickr-input form-control" type="text"
+													placeholder="Select Date..">
+											</div>
+										</div>
+									</div>
+									<div class="col-md-2">
+										<div class="col-form-label">상태</div>
+									</div>
+									<div class="col-md-4">
+										<div class="dropdown">
+											<button class="btn btn-secondary dropdown-toggle" type="button"
+												id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+												aria-expanded="false">
+												상태
+											</button>
+											<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+												<a class="dropdown-item" href="#">Reserved</a>
+												<a class="dropdown-item" href="#">Reservation Confirmed</a>
+												<a class="dropdown-item" href="#">Canceled</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+
+								</div>
+							</div>
+							<div class="col-md-2">
+								<button type="button" class="btn btn-outline-primary">조회</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="card mt-md-5">
+					<table class=" table">
+						<thead>
+							<tr>
+								<th class="text-center">예약번호</th>
+								<th class="text-center">경호시작</th>
+								<th class="text-center">경호종료</th>
+								<th class="text-center">상태</th>
+								<th class="text-center">경호원이름</th>
+								<th class="text-center">경호원성별</th>
+								<th class="text-center">경호원전화번호</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="text-center">1</td>
+								<td class="text-center">2021-08-27 15:30</td>
+								<td class="text-center">2021-08-27 18:00</td>
+								<td class="text-center">Reservation Confirmed</td>
+								<td class="text-center">홍길동</td>
+								<td class="text-center">Male</td>
+								<td class="text-center">010-6400-1234</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+		</div>
+		</section>
+
+		<!--<div th:insert="~{fragment/footer :: copy}"></div>-->
+
+	</div>
+
+</body>
+
+</html>
